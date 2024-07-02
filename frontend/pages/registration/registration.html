@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="register">
+        <h1 class="reg">Registration</h1>
+        <div class="main">
+            <div class="role">
+                <button id="user">As User</button>
+                <button id="cinema">As Cinema</button>
+            </div>
+          
+                <form id="registrationForm">
+                    <div class="form-group" id="userNameGroup">
+                        <label for="username">UserName</label>
+                        <input type="text" id="username"  name="username" required>
+                        <span class="error-message" id="username-error"></span>
+                    </div>
+                    <div class="form-group" id="cinemaNameGroup">
+                        <label for="cinemaname">CinemaName</label>
+                        <input type="text" id="cinemaname" name="cinemaname" required>
+                        <span class="error-message" id="cinemaname-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EmailAddres</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmpassword">ConfirmPassword</label>
+                        <input type="password" id="confirmpassword" name="confirmpassword" required>
+                        <span class="error-message" id="confirmpassword-error"></span>
+                    </div>
+                    <div class="form-group" id="cinemaDescription">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                    <span class="error-message" id="description-error"></span>
+                    </div>
+                    <span class="gotologin" id="gotologin" role="link"></span>
+                    <button id="registerButton" type="submit">Register as a User</button>
+                    
+                </form>
+        
+        </div>
+    </div>
+
+
+    <!-- <script src="./jscollection/main.js">      
+    </script>
+    <script src="./jscollection/evenListeners.js">      
+    </script> -->
+    <script  type="module" src="./jscollection/registration.js">      
+    </script>
+    <!-- <script  type="module" src="./jscollection/uiHelper.js">       -->
+    </script>
+    <!-- <script src="./jscollection/validation.js">      
+    </script>  -->
+</body>
+</html>
