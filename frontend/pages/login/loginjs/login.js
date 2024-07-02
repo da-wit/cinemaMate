@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(date, `Login as ${selectedRole} was a successes`);
     localStorage.setItem("token", date.token);
     if (selectedRole === "user") {
-      window.location.href = "../user/userhome.html";
+      window.location.href = "../user/home/userhome.html";
     } else if (selectedRole === "cinema") {
       window.location.href = "../cinema/cinemahome.html";
     }

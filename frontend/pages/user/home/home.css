@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #1D2228;
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 10px 100px 10px 100px; */
+    align-items: center;
+    
+}
+.logo{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+
+}
+.imageContainer{
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-img{
+    width: 200px;
+    height: 200px; 
+   
+  
+}
+
+nav{
+    margin-right: 100px;
+
+
+}
+
+.links{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.links-item{
+    margin: 10px 20px 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    
+   
+}
+.links-item:hover{
+    color: greenyellow;
+}
+.profile{
+    position: relative;
+}
+.profile:hover::after{
+    position: absolute;
+    content: 'Profile';
+    top: 100%;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+    margin-top: 10px;
+    
+}
+.dropdown{
+    list-style: none;
+    width: 120px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    animation: dropdownanimation 0.5s forwards ease-in-out;
+    
+}
+@keyframes dropdownanimation{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.dropdown-item {
+    padding: 4px 6px;
+    cursor: pointer;
+}
+.dropdown-item a{
+    text-decoration: none;
+    color: white;
+}
+a:active{
+    color: greenyellow;
+    
+}
+
+
+
+.dropdown.active{
+    display: block;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+   
+}
+.view{
+    
+    display: grid;
+    justify-content: center ;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+
+    gap: 20px;
+    
+}
+.display-movie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 100%;
+
+}
+.img-clip{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px;
+}
+.img{
+    width: 400px;
+    height: 250px;  
+}
+.property{
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    justify-content: center;
+    align-items: center;
+}
+.property-movie{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+.pfirst{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+.common{
+    margin: 5px;
+}
+
+.watchlist{
+    margin: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.fav{
+    color: greenyellow;
+}
+.watchlater{
+    color: green;
+}
+.watched{
+    color: red;
+}
+
+
+/* [ {
+    "_id": "6679fe66c06d69c529e04118",
+        "title": "Ethio 1",
+        "genre": [ "action",
+        "comedy"
+        ],
+        "numberOfSeats": 1000,
+        "watchDate": "09/7/2024",
+        "watchTime": "09:00 AM",
+        "imagePath": "uploads\\R-1719271014665-938909347.jpg",
+        "cinema_id": "6679e5b705510b75b0e7e1ad",
+        "createdAt": "2024-06-24T23:16:54.673Z",
+        "updatedAt": "2024-06-24T23:16:54.673Z",
+        "__v": 0
+}
+
+,
+{
+"_id": "667aa22613fd621b52e854a7",
+    "title": "aait",
+    "genre": [ "school",
+    "IT"
+    ],
+    "numberOfSeats": 100,
+    "watchDate": "5/5/2024",
+    "watchTime": "07:10 PM",
+    "imagePath": "uploads\\aait-1719312934639-18363638.jpg",
+    "cinema_id": "6679e5b705510b75b0e7e1ad",
+    "createdAt": "2024-06-25T10:55:34.662Z",
+    "updatedAt": "2024-06-25T10:55:34.662Z",
+    "__v": 0
+}
+
+] */
