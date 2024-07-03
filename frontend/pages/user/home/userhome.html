@@ -19,23 +19,28 @@
         </div>
         <nav class="nav-bar">
             <ul class="links">
-                <li class="links-item">Home</li>
+                <li class="links-item"><a href="./userhome.html">Home</a></li>
                 <li class="links-item" id="dropdown-watchlist">Watchlist
                 <ul id="watchlistDropdown" class="dropdown">
-                    <li class="dropdown-item"><a href="#">Favorite</a></li>
-                    <li class="dropdown-item"><a href="#">Watch Later</a></li>
-                    <li class="dropdown-item"><a href="#">Watched</a></li>
+                    <li class="dropdown-item"><a href="../watchlist/favorites/fav.html">Favorite</a></li>
+                    <li class="dropdown-item"><a href="../watchlist/watchLater/watchlater.html">Watch Later</a></li>
+                    <li class="dropdown-item"><a href="../watchlist/watched/watched.html">Watched</a></li>
                 </ul>
                 </li> <!-- will have 3 drop down watchlater favorite and watched -->
-                <li class="links-item"><i class="fa-solid fa-user profile"></i></li>
-                <li class="links-item"><i class="fa-solid fa-right-from-bracket"></i></li>
+                <li class="links-item profile">
+                    <a href="../profile/profile.html" ><i class="fa-solid fa-user "></i></li></a>
+                   
+                <li class="links-item logout" id="logout"><i class="fa-solid fa-right-from-bracket"></i></li>
+                
             </ul>
         </nav>
     </header>
     <main class="main">
         <!-- this is where the movies are going to be displayed using a grid layout -->
-         <div class="view">
-            <article class="display-movie">
+         <div class="view" id="view">
+           
+             <!-- <article class="display-movie">
+                <h1>Cinema Name</h1>
                 <div class="img-clip">
                     <img class="img" src="../../../images/solo.png" alt="for testing">
                 </div>
@@ -44,7 +49,16 @@
                     <div class="property-movie">
                         <section class="pfirst">
                         
-                            <span class="genre common">Genre:kdkdkdkkdkdkdkdkkdkdkkdkdkdkdkdkd</span>
+                            <div class="genre common">
+                                <span class="gspan">Genre:</span>
+                                <ul class="genre-grid">
+                                    <li>action</li>
+                                    <li>fantasy</li>
+                                    <li>fiction</li>
+                                    <li>war</li>
+                            
+                                </ul>
+                            </div>
                             <span class="show-time common">Show time:djjjjjjjjjjjjjjjjj</span>
                        
                             <span class="show-date common">show date:djjjjjjjjjjjjjjjjjjjjjjjjj</span>
@@ -60,105 +74,7 @@
                     </div>
                 </div>
             </article>
-
-            <article class="display-movie">
-                <div class="img-clip">
-                    <img class="img" src="../../../images/solo.png" alt="for testing">
-                </div>
-                <div class="property">
-                    <h1 class="title">Title</h1>
-                    <div class="property-movie">
-                        <section class="pfirst">
-            
-                            <span class="genre common">Genre:kdkdkdkkdkdkdkdkkdkdkkdkdkdkdkdkd</span>
-                            <span class="show-time common">Show time:djjjjjjjjjjjjjjjjj</span>
-            
-                            <span class="show-date common">show date:djjjjjjjjjjjjjjjjjjjjjjjjj</span>
-                            <span class="seats common">number of seats:kdddddddddddddd</span>
-            
-                        </section>
-            
-                    </div>
-                    <div class="watchlist">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-solid fa-bookmark watchlater"></i>
-                        <i class="fa-solid fa-eye-slash watched"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="display-movie">
-                <div class="img-clip">
-                    <img class="img" src="../../../images/solo.png" alt="for testing">
-                </div>
-                <div class="property">
-                    <h1 class="title">Title</h1>
-                    <div class="property-movie">
-                        <section class="pfirst">
-            
-                            <span class="genre common">Genre:kdkdkdkkdkdkdkdkkdkdkkdkdkdkdkdkd</span>
-                            <span class="show-time common">Show time:djjjjjjjjjjjjjjjjj</span>
-            
-                            <span class="show-date common">show date:djjjjjjjjjjjjjjjjjjjjjjjjj</span>
-                            <span class="seats common">number of seats:kdddddddddddddd</span>
-            
-                        </section>
-            
-                    </div>
-                    <div class="watchlist">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-solid fa-bookmark watchlater"></i>
-                        <i class="fa-solid fa-eye-slash watched"></i>
-                    </div>
-                </div>
-            </article><article class="display-movie">
-                <div class="img-clip">
-                    <img class="img" src="../../../images/solo.png" alt="for testing">
-                </div>
-                <div class="property">
-                    <h1 class="title">Title</h1>
-                    <div class="property-movie">
-                        <section class="pfirst">
-            
-                            <span class="genre common">Genre:kdkdkdkkdkdkdkdkkdkdkkdkdkdkdkdkd</span>
-                            <span class="show-time common">Show time:djjjjjjjjjjjjjjjjj</span>
-            
-                            <span class="show-date common">show date:djjjjjjjjjjjjjjjjjjjjjjjjj</span>
-                            <span class="seats common">number of seats:kdddddddddddddd</span>
-            
-                        </section>
-            
-                    </div>
-                    <div class="watchlist">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-solid fa-bookmark watchlater"></i>
-                        <i class="fa-solid fa-eye-slash watched"></i>
-                    </div>
-                </div>
-            </article><article class="display-movie">
-                <div class="img-clip">
-                    <img class="img" src="../../../images/solo.png" alt="for testing">
-                </div>
-                <div class="property">
-                    <h1 class="title">Title</h1>
-                    <div class="property-movie">
-                        <section class="pfirst">
-            
-                            <span class="genre common">Genre:kdkdkdkkdkdkdkdkkdkdkkdkdkdkdkdkd</span>
-                            <span class="show-time common">Show time:djjjjjjjjjjjjjjjjj</span>
-            
-                            <span class="show-date common">show date:djjjjjjjjjjjjjjjjjjjjjjjjj</span>
-                            <span class="seats common">number of seats:kdddddddddddddd</span>
-            
-                        </section>
-            
-                    </div>
-                    <div class="watchlist">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-solid fa-bookmark watchlater"></i>
-                        <i class="fa-solid fa-eye-slash watched"></i>
-                    </div>
-                </div>
-            </article>
+            -->
             
                 
 
@@ -166,5 +82,7 @@
          </div>
     </main>
     <script src="./js/dropdown.js" ></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/logout.js" ></script>
 </body>
 </html>

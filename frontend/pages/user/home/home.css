@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     display: flex;
     flex-direction: column;
     background-color: #1D2228;
     color: white;
 }
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -15,6 +17,7 @@ body{
     align-items: center;
     
 }
+
 .logo{
     display: flex;
     /* flex-direction: column; */
@@ -22,6 +25,7 @@ body{
     align-items: center;
 
 }
+
 .imageContainer{
     margin-right: 20px;
     width: 150px;
@@ -32,6 +36,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .logo-img{
     width: 200px;
     height: 200px; 
@@ -50,6 +55,7 @@ nav{
     list-style: none;
     justify-content: center;
 }
+
 .links-item{
     margin: 10px 20px 10px 20px;
     font-size: 25px;
@@ -58,12 +64,24 @@ nav{
     
    
 }
+.links-item a{
+    color: white;
+    text-decoration: none;
+}
+
+.links-item a:hover {
+    color: greenyellow;
+}
+
+
 .links-item:hover{
     color: greenyellow;
 }
+
 .profile{
     position: relative;
 }
+
 .profile:hover::after{
     position: absolute;
     content: 'Profile';
@@ -74,6 +92,25 @@ nav{
     margin-top: 10px;
     
 }
+.logout{
+    position: relative;
+}
+.logout:hover{
+    color: red;
+}
+.logout:hover::after{
+    color: red;
+    position: absolute;
+    content: 'Logout';
+    top: 100%;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+    /* margin-top: 10px; */
+}
+
+
+
 .dropdown{
     list-style: none;
     width: 120px;
@@ -87,9 +124,9 @@ nav{
     border-radius: 5px;
     color: white;
     display: none;
-    animation: dropdownanimation 0.5s forwards ease-in-out;
-    
+    animation: dropdownanimation 0.3s forwards ease-in-out;  
 }
+
 @keyframes dropdownanimation{
     from{
         opacity: 0;
@@ -106,57 +143,38 @@ nav{
     padding: 4px 6px;
     cursor: pointer;
 }
+
 .dropdown-item a{
     text-decoration: none;
     color: white;
 }
+
 a:active{
     color: greenyellow;
     
 }
-
-
 
 .dropdown.active{
     display: block;
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main{
     margin-top: 20px;
     margin-left: 200px;
     margin-right: 200px;
-   
+    margin-bottom: 20px;   
 }
+
 .view{
-    
+  
     display: grid;
     justify-content: center ;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
-
     gap: 20px;
-    
 }
+
 .display-movie{
     display: flex;
     flex-direction: column;
@@ -164,8 +182,8 @@ a:active{
     align-items: center;
     border: 1px solid white;
     width: 100%;
-
 }
+
 .img-clip{
     width: 300px;
     height: 200px;
@@ -175,10 +193,12 @@ a:active{
     overflow: hidden;
     margin: 20px;
 }
+
 .img{
     width: 400px;
     height: 250px;  
 }
+
 .property{
     display: flex;
     flex-direction: column;
@@ -186,17 +206,20 @@ a:active{
     justify-content: center;
     align-items: center;
 }
+
 .property-movie{
     display: flex;
     justify-content: space-between;
     margin: 10px;
     
 }
+
 .pfirst{
     display: flex;
     flex-direction: column;
     justify-content: center;   
 }
+
 .common{
     margin: 5px;
 }
@@ -207,16 +230,55 @@ a:active{
     display: flex;
     justify-content: space-evenly;
 }
+
 .fav{
     color: greenyellow;
 }
+
 .watchlater{
     color: green;
 }
+
 .watched{
     color: red;
 }
 
+.genre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gspan{
+    margin-right: 20px;
+}
+
+.genre-grid{
+    max-width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    max-height: 30px;
+    gap: 5px;
+    overflow: hidden;
+   
+}
+.genre-grid:hover{
+    overflow: visible;
+    z-index: 1;
+}
+.genre-grid li{
+    /* padding: 2px; */
+    background-color: #333;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding:3px 5px;
+    text-align: center;
+    
+}
+/* a:visited{
+    text-decoration: underline;
+} */
 
 /* [ {
     "_id": "6679fe66c06d69c529e04118",
