@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="fav.css">
 </head>
 <body>
-    <h1>Fav</h1>
+    <header class="header">
+        <div class="logo">
+    
+            <div class="imageContainer">
+                <img class="logo-img" src="../../../../images/solo1.jpg" alt="logoImgage">
+    
+            </div>
+            <h1>CinemaMate</h1>
+        </div>
+        <nav class="nav-bar">
+            <ul class="links">
+                <li class="links-item"><a href="../../home/userhome.html">Home</a></li>
+                <li class="links-item" id="dropdown-watchlist">Watchlist
+                    <ul id="watchlistDropdown" class="dropdown">
+                        <li class="dropdown-item"><a href="fav.html">Favorite</a></li>
+                        <li class="dropdown-item"><a href="../watchLater/watchlater.html">Watch Later</a></li>
+                        <li class="dropdown-item"><a href="../watched/watched.html">Watched</a></li>
+                    </ul>
+                </li> <!-- will have 3 drop down watchlater favorite and watched -->
+                <li class="links-item profile">
+                    <a href="../profile/profile.html"><i class="fa-solid fa-user "></i>
+                </li></a>
+    
+                <li class="links-item logout" id="logout"><i class="fa-solid fa-right-from-bracket"></i></li>
+    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="view" id="view">
+            <!-- <article class="display-movie">
+                <section class="img-clip">
+                    <img src="../../../../images/solo.png" alt="title">
+                </section>
+                <div class="movie-property">
+                    <div class="property">
+                        <h1 class="title">Title</h1>
+                        <h1 class="value">Title</h1>
+                    </div>
+                    <div class="property">
+                        <span class="genre-title">Genre</span>
+                        <ul class="genre">
+                            <li class="genre-items">action</li>
+                            <li class="genre-items">history</li>
+                            <li class="genre-items">action</li>
+                            <li class="genre-items">history</li>
+                            <li class="genre-items">action</li>
+                            <li class="genre-items">history</li>
+                        </ul>
+
+                    </div>
+                    <div class="property"><span class="show-time">Show Time</span>
+                    <span class="value">S</span></div>
+                    <div class="property"><span class="show-date">Show Date</span>
+                    <span class="value">S</span></div>
+                    <div class="property"><span class="seats">Number of Seats</span>
+                    <span class="value">N</span></div>
+                   
+                   
+                </div>
+                
+            </article> -->
+                    </div>
+
+    </main>
+    <script src="../../home/js/logout.js" ></script>
+    <script src="../../home/js/dropdown.js" ></script>
+    <script src="./js/rendermovies.js"></script>
 </body>
 </html>

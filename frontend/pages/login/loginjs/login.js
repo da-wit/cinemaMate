@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (event) {
   const inputemail = document.getElementById("email");
   const inputpassword = document.getElementById("password");
   const showError = document.getElementById("login-error");

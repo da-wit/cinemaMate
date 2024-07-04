@@ -1,3 +1,5 @@
+import { addToFavorties } from "./favbutton.js";
+
 document.addEventListener("DOMContentLoaded", async function () {
   const token = localStorage.getItem("token");
   if (!token) {
@@ -14,19 +16,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     throw new Error("Network response was not ok");
   }
 
-  //   async function getCinemaName(cinemaId) {
-  //     const response = await fetch(`http://127.0.0.1:3000/cinema/${cinemaId}`, {
-  //       method: "GET",
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //     });
-  //     if (!response.ok) {
-  //       throw new Error("Network response was not ok");
-  //     }
-  //     const cinema = await response.json();
-  //     return cinema.cinemaName;
-  //   }
   async function getCinemaName(cinemaId) {
     const response = await fetch(`http://127.0.0.1:3000/cinema/${cinemaId}`, {
       method: "GET",
@@ -40,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const cinemaData = await response.text();
-    console.log(cinemaData);
+    // console.log(cinemaData);
     return cinemaData;
   }
 
@@ -50,12 +39,15 @@ document.addEventListener("DOMContentLoaded", async function () {
   const view = document.getElementById("view");
 
   for (const movie of movies) {
-    console.log(movie.imagePath);
     const getcinemaName = await getCinemaName(movie.cinema_id);
     const article = document.createElement("article");
     article.className = "display-movie";
+    article.setAttribute("data-id", movie._id);
+    article.dataset.movieId = movie._id;
     article.innerHTML = `
     <h1>${getcinemaName}</h1>
+   
+
     <div class="img-clip">
                     <img class="img" src="http://127.0.0.1:3000/${
                       movie.imagePath
@@ -90,13 +82,22 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                     </div>
                     <div class="watchlist">
-                        <i class="fa-solid fa-heart fav"></i>
-                        <i class="fa-solid fa-bookmark watchlater"></i>
-                        <i class="fa-solid fa-eye-slash watched"></i>
+                        <i class="fa-solid fa-heart fav"  role="button" ></i>
+                        <i class="fa-solid fa-bookmark watchlater" role="button" ></i>
+                        <i class="fa-solid fa-eye-slash watched"  role="button" ></i>
                     </div>
                 </div>
     `;
     view.appendChild(article);
+
+    const favoriteButtons = article.querySelectorAll(".fav");
+    favoriteButtons.forEach((favButton) => {
+      favButton.addEventListener("click", async function (event) {
+        const movieId =
+          event.currentTarget.closest("[data-movie-id]").dataset.movieId;
+        await addToFavorties(movieId, token);
+      });
+    });
   }
 });
 
