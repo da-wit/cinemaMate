@@ -28,7 +28,7 @@
                     </ul>
                 </li> <!-- will have 3 drop down watchlater favorite and watched -->
                 <li class="links-item profile">
-                    <a href="../profile/profile.html"><i class="fa-solid fa-user "></i>
+                    <a href="../../profile/profile.html"><i class="fa-solid fa-user "></i>
                 </li></a>
     
                 <li class="links-item logout" id="logout"><i class="fa-solid fa-right-from-bracket"></i></li>
@@ -37,6 +37,7 @@
         </nav>
     </header>
     <main>
+          <span class="notification" id="notification"></span>
         <div class="view" id="view">
             <!-- <article class="display-movie">
                 <section class="img-clip">
@@ -68,6 +69,7 @@
                    
                    
                 </div>
+                <span class="delete"><i class="fa-solid fa-trash"></i></span>
                 
             </article> -->
                     </div>
@@ -75,6 +77,11 @@
     </main>
     <script src="../../home/js/logout.js" ></script>
     <script src="../../home/js/dropdown.js" ></script>
-    <script src="./js/rendermovies.js"></script>
+    <script type="module" src="./js/rendermovies.js"></script>
+    <script type="module" src="./js/delete-hover.js"></script>
+    <script type="module" src="./js/fav-delete-button.js"></script>
+    <script type="module" src="../../home/js/notification.js"></script>
+    
+    
 </body>
 </html>

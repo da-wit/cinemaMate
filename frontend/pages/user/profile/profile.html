@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Profile</h1>
+    <header class="header">
+        <div class="logo">
+            
+            <div class="imageContainer">
+                <img class="logo-img" src="../../../images/solo1.jpg" alt="logoImgage">
+
+            </div>
+            <h1>CinemaMate</h1>
+        </div>
+        <nav class="nav-bar">
+            <ul class="links">
+                <li class="links-item"><a href="./../home/userhome.html">Home</a></li>
+                <li class="links-item" id="dropdown-watchlist">Watchlist
+                <ul id="watchlistDropdown" class="dropdown">
+                    <li class="dropdown-item"><a href="../watchlist/favorites/fav.html">Favorite</a></li>
+                    <li class="dropdown-item"><a href="../watchlist/watchLater/watchlater.html">Watch Later</a></li>
+                    <li class="dropdown-item"><a href="../watchlist/watched/watched.html">Watched</a></li>
+                </ul>
+                </li> 
+                <li class="links-item profile">
+                    <a href="../profile/profile.html" ><i class="fa-solid fa-user "></i></li></a>
+                   
+                <li class="links-item logout" id="logout"><i class="fa-solid fa-right-from-bracket"></i></li>
+                
+            </ul>
+        </nav>
+    </header>
+        <div id="overlay" class="overlay"></div>
+        <form  class="add-image" id="add-image">
+                <input type="file" accept="image/*" id="input-image" name="profileImage">
+                <div class="form-div">
+                    <button type="submit" id="submit-image">Add</button>
+                <button type="button" id="cancle-image">Cancel</button>
+                </div>
+            </form>
+    <main class="main" id="main">
+        
+        <!-- <div class="user" id="user-info">
+            <section class="section-1">
+               <div class="img-clip">
+                 <img class='img' src="../../../images/solo.png" alt="profile">
+                 <span class="edit-icon" id='edit'><i class="fa-solid fa-pen-to-square"></i></span>
+               </div>
+            </section>
+            <section class="section-2">
+               <div>
+                 <h1>User Name</h1>
+                 <h2>Emial addres</h2>
+                </div>
+                <div>
+                   <h1>actual name </h1>
+                <h2>Actual Emial addres</h2>
+               </div>
+            </section>
+            <section class="section-3">
+                <button>
+                    Change User Name
+                </button>
+                <button>
+                    Change Password
+                </button>
+                <button>Delete account</button>
+            </section>
+        </div> -->
+        
+    </main>
+
+    <script src="../home/js/dropdown.js"></script>
+    <script src="./js/renderuser.js"></script>
+    <script src="./js/editprofile.js"></script>
 </body>
 </html>

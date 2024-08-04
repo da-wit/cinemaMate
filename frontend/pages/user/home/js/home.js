@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     article.className = "display-movie";
     article.setAttribute("data-id", movie._id);
     article.dataset.movieId = movie._id;
+    console.log(movie.imagePath);
     article.innerHTML = `
     <h1>${getcinemaName}</h1>
    
@@ -90,14 +91,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     `;
     view.appendChild(article);
 
-    const favoriteButtons = article.querySelectorAll(".fav");
-    favoriteButtons.forEach((favButton) => {
-      favButton.addEventListener("click", async function (event) {
-        const movieId =
-          event.currentTarget.closest("[data-movie-id]").dataset.movieId;
-        await addToFavorties(movieId, token);
-      });
+    // const favoriteButton = article.querySelectorAll(".fav");
+    const favButton = article.querySelector(".fav");
+    // favoriteButtons.forEach((favButton) => {
+    favButton.addEventListener("click", async function (event) {
+      const movieId =
+        event.currentTarget.closest("[data-movie-id]").dataset.movieId;
+      await addToFavorties(movieId, token);
     });
+    // });
   }
 });
 

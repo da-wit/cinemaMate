@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d2228;
+  color: white;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 100px 10px 100px;
+  align-items: center;
+  background-color: rgba(172, 255, 47, 0.44);
+  margin: 10px 20px;
+  /* position: fixed; */
+}
+
+.logo {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+}
+
+nav {
+  margin-right: 100px;
+  /* margin-left: 70%; */
+  /* position: fixed; */
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.links-item {
+  margin: 10px 20px 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+}
+.links-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.links-item a:hover {
+  color: greenyellow;
+}
+
+.links-item:hover {
+  color: greenyellow;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile:hover::after {
+  position: absolute;
+  content: "Profile";
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.logout {
+  position: relative;
+}
+.logout:hover {
+  color: red;
+}
+.logout:hover::after {
+  color: red;
+  position: absolute;
+  content: "Logout";
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+  /* margin-top: 10px; */
+}
+
+.dropdown {
+  list-style: none;
+  width: 120px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  color: white;
+  display: none;
+  animation: dropdownanimation 0.3s forwards ease-in-out;
+}
+
+@keyframes dropdownanimation {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  color: greenyellow;
+}
+
+.dropdown.active {
+  display: block;
+  opacity: 1;
+}
+
+/* for the profile image */
+.img-clip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+.img {
+  width: 400px;
+  height: 400px;
+}
+.edit-icon {
+  position: absolute;
+  left: 70%;
+  top: 75%;
+  z-index: 1000px;
+  color: greenyellow;
+  font-size: 40px;
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.section-2 {
+  display: flex;
+  gap: 50px;
+  /* justify-content: ; */
+  /* flex-direction: column; */
+  /* justify-content: center;
+  align-items: center; */
+}
+.section-2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-3 {
+  /* margin-top: 50px; */
+  padding: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-3 button {
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: greenyellow;
+  border-radius: 20px;
+  width: 300px;
+  font-size: 20px;
+}
+
+.section-3 button:hover {
+  background-color: black;
+  color: greenyellow;
+}
+
+
+/* add image form */
+.add-image{
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  background-color: rgb(31, 204, 40);
+  height: 20%;
+  width:  20%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; 
+
+}
+
+.form-div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#submit-image{
+  background-color:greenyellow;
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+}
+#cancle-image{
+  background-color:red;
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    z-index: 999; 
+}
